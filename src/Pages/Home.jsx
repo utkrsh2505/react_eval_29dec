@@ -22,7 +22,21 @@ const Home = ()=>{
     },[])
     return(
         <>
+        <div style={{display:"flex",justifyContent:"center",alignItems:"center",flexWrap:"Wrap",width:"900px",margin:"auto"}}>
+{val.map((prod)=>(
+<div key={prod.id} style={{display:"flex",justifyContent:"left", alignItems:"center",width:"400px",border:"1px solid black",margin:"20px"}}>
+    <img src={prod.image} style={{width:"150px",height:"150px"}}/>
+    <div>
+    <div>
+        Name : {prod.name}</div>
+      <div> Price : {prod.price}
 
+    </div>
+    <button style={{color:"white",backgroundColor:"black",borderRadius:"10px"}}>Add to cart</button>
+    </div>
+</div>
+))}
+</div>
         </>
     )
 }
